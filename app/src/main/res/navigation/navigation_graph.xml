@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/anaFragment">
+
+    <fragment
+        android:id="@+id/anaFragment"
+        android:name="com.gok.smartagriculture.view.AnaFragment"
+        android:label="fragment_ana"
+        tools:layout="@layout/fragment_ana" >
+        <action
+            android:id="@+id/action_anaFragment_to_verilerFragment"
+            app:destination="@id/verilerFragment" />
+        <action
+            android:id="@+id/action_anaFragment_to_kontrolFragment"
+            app:destination="@id/kontrolFragment" />
+        <action
+            android:id="@+id/action_anaFragment_to_haberlerFragment"
+            app:destination="@id/haberlerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verilerFragment"
+        android:name="com.gok.smartagriculture.view.VerilerFragment"
+        android:label="fragment_veriler"
+        tools:layout="@layout/fragment_veriler" >
+        <action
+            android:id="@+id/action_verilerFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kontrolFragment"
+        android:name="com.gok.smartagriculture.view.KontrolFragment"
+        android:label="fragment_kontrol_activity"
+        tools:layout="@layout/fragment_kontrol" >
+        <action
+            android:id="@+id/action_kontrolFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/haberlerFragment"
+        android:name="com.gok.smartagriculture.view.HaberlerFragment"
+        android:label="fragment_haberler"
+        tools:layout="@layout/fragment_haberler" >
+        <action
+            android:id="@+id/action_haberlerFragment_to_anaFragment"
+            app:destination="@id/anaFragment" />
+        <action
+            android:id="@+id/action_haberlerFragment_to_haberlerDetayFragment"
+            app:destination="@id/haberlerDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/haberlerDetayFragment"
+        android:name="com.gok.smartagriculture.view.HaberlerDetayFragment"
+        android:label="fragment_haberler_detay"
+        tools:layout="@layout/fragment_haberler_detay" >
+        <action
+            android:id="@+id/action_haberlerDetayFragment_to_haberlerFragment"
+            app:destination="@id/haberlerFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Smart Agriculture</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="veriler">Veriler</string>
+    <string name="kontrol">kontrol</string>
+    <string name="haberler">Haberler</string>
+</resources>
